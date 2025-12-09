@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="library.css">
+    <script src="library.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <section class="sidebar">
+            <div class="sidebar-inside">
+                <img src="icon/book.png"/>
+                <h2>Library</h2>
+            </div>
+            <section class="list-items">
+                <a href="#" class="list-item">
+                    <img class="list-item-icon" src="icon/home.svg">
+                    <b class="list-item-text">Discover</b>
+                </a>
+                <a href="#" class="list-item">
+                    <img class="list-item-icon" src="icon/category.svg">
+                    <b class="list-item-text">Category</b>
+                </a href="#">
+                <a href="#" class="list-item">
+                    <img class="list-item-icon" src="icon/library.svg">
+                    <b class="list-item-text">My Library</b>
+                </a href="#">
+                <a href="#" class="list-item">
+                    <img class="list-item-icon" src="icon/download.svg">
+                    <b class="list-item-text">Download</b>
+                </a href="#">
+                <a href="#" class="list-item">
+                    <img class="list-item-icon" src="icon/audio.svg">
+                    <b class="list-item-text">Audio Books</b>
+                </a href="#">
+                <a href="#" class="list-item">
+                    <img class="list-item-icon" src="icon/favorite.svg">
+                    <b class="list-item-text">Favorite</b>
+                </a href="#">
+            </section>
+            <div class="setting-section">
+                <a class="list-item">
+                    <img class="list-item-icon" src="icon/setting.svg">
+                    <b class="list-item-text">Setting</b>
+                </a>
+                <a class="list-item">
+                    <img class="list-item-icon" src="icon/support.svg">
+                    <b class="list-item-text">Support</b>
+                </a>
+                <a class="list-item">
+                    <img class="list-item-icon" src="icon/logout.svg">
+                    <b class="list-item-text">Logout</b>
+                </a>
+            </div>
+        </section>
+
+        <section class="header">
+            <form class="search">
+                <input id="search-input" type="search" placeholder="Search your favorite books...">
+                <img class="search-icon" src="icon/search.svg">
+            </form>
+            <div>
+                <img src="icon/notification.svg">
+                <img class="logo" src="icon/profile.jpg">
+                <div class="header-profile">
+                    <p>Yuzu</p>
+                    <img src="icon/arrow-down.svg">
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <div class="book-feed">
+                <div>
+                    <p>Beatriz I. Crew</p>  
+                    <h2>8 Beatriz Book Part I</h2>
+                </div>
+                <button class="button">Continue</button>
+            </div>
+            <div class="book-shelf">
+                <h2>Recommended</h2>
+                <button class="button addBook-button"><p>Add Book&nbsp;&nbsp;</p><div>+</div></button>
+
+                <div class="books">
+                    <div class="book">
+                        <div class="cover">
+                            <p>20 Pages</p>
+                        </div>
+                        <div class="book-content">
+                            <h2 class="book-title">8 Beatriz Book Part I</h2>
+                            <p>Beatriz I. Crew</p>
+                            <div class="book-bottom">
+                                <button class="button">Continue</button>
+                                <img class="icon-trash" src="icon/trash.svg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <div class="cover">
+                            <p>200 Pages</p>
+                        </div>
+                        <div class="book-content">
+                            <h2 class="book-title">8 Beatriz Book Part II</h2>
+                            <p>Beatriz I. Crew</p>
+                            <div class="book-bottom">
+                                <button class="button">Continue</button>
+                                <img class="icon-trash" src="icon/trash.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="ads">
+            <div class="ads-book"></div>
+            <div>
+                <p>Lorem Ipsum dolor sit</p>
+                <p>Author Name</p>
+            </div>
+            <div class="ads-flex">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <img src="icon/star.svg">
+                <span>5.0</span>
+            </div>
+            <div class="ads-flex">
+               <span class="ads-box-border">
+                    <p>320</p>
+                    <p>Pages</p>
+               </span>
+               <span class="ads-box-border">
+                    <p>643</p>
+                    <p>Ratings</p>
+                </span>
+                <span>
+                    <p>110
+                    <p>Reviews</p>
+                </span>
+            </div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                aliquip ex ea commodo consequat.</div>
+        </div>
+    </div>
+    <div class="scrim hidden">
+        <form  action="#" class="scrim-container">
+            <img class="close" src="icon/close.svg">
+            <h2>Add New Book</h2>
+            <div>
+                <label for="scrim-title">Book Title</label>
+                <input type="text" name="scrim-title" id="scrim-title" placeholder="Enter Book Title" required>
+            </div>
+            <div>
+                <label for="scrim-author">Book Author</label>
+                <input type="text" name="scrim-author" id="scrim-author" placeholder="Enter Author" required>
+            </div>
+            <div>
+                <label for="scrim-number">No. of Pages</label>
+                <input type="number" name="scrim-number" id="scrim-number" placeholder="Enter Pages" required>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="toggle-switch">
+                <label class="toggle-switch" for="toggle-switch"></label>
+                <span>Did you read this?</span>
+            </div>
+            <button type="submit" class="button scrim-confirm">CONFIRM</button>
+            <button class="button scrim-reset">RESET</button>
+        </form>
+    </div>
+   
+</body>
+
+</html>

@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img:hover {
+    cursor: pointer;
+}
+  
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 3fr;
+    grid-template-areas: "sidebar header header"
+    "sidebar main-content ads";
+}
+
+.sidebar, .header, .book-shelf, .book, .scrim-container {
+    background-color: rgb(189, 158, 220);
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 30px 95px 30px 30px;
+}
+
+.sidebar-inside {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 5fr);
+    row-gap: 52px;
+}
+
+.sidebar-inside > h2 {
+    align-self: center;
+    padding-left: 20px;
+    color: black;
+}
+
+.sidebar-inside > img {
+    width: 48px;
+}
+
+.list-items {
+    margin-top: 3rem;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.list-item-icon {
+    background-color: rgb(210, 124, 218);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a {
+    color: #434343;
+    text-decoration: none;
+}
+
+.icon-hover {
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.list-item-text-hover {
+    color: black;
+    size: 5px;
+}
+
+.setting-section {
+    margin-top: 5vh;
+    padding-top: 5vh;
+    border-top: 1px white solid;
+}
+
+/*  */
+
+.header {
+    padding: 20px 60px 20px 40px;  
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.5);
+}
+
+.header > div, .header-profile {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+}
+
+input {
+    padding: 20px 40px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: #434343;
+}
+
+input:focus, .scrim-container > div > input:focus {
+    border: 2.5px solid rgb(132, 65, 138); 
+    outline: none;
+}
+
+
+.search > input {
+    background: #e7e3e9;
+    width: 120%;
+    border: 2.5px solid rgb(189, 158, 220);
+    margin-left: 10px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 22px;
+    top: 20px;
+}
+
+
+
+.logo {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header-profile:hover {
+    color: rgb(132, 65, 138);
+}
+
+/*  */
+
+.main-content {
+    background-color: rgb(233, 227, 227);
+    grid-area: main-content;
+    padding: 30px;
+    box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.5);
+    display: grid;
+}
+
+.book-feed, .book-shelf {
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.book-feed {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(0 0 0 / 90%)), url(icon/olivier-leysen-Qra8tAmYyoU-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 330px;
+    color: white;
+    display: grid;
+    align-content: end;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.book-feed > div > p {
+    margin-bottom: 10px;
+}
+
+.book-feed > button {
+    width: 100px;
+}
+
+.button {
+    height: 40px;
+    padding: 0 15px;
+    background-color: rgb(132, 65, 138);
+    border-radius: 10px;
+    border: 1px solid rgb(132, 65, 138);
+    font-size: 16px;
+    color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.button:hover {
+    background-color: white;
+    color: rgb(132, 65, 138);
+    cursor: pointer;
+}
+
+.book-shelf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.book-shelf > button {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    
+}
+
+.book-shelf > button > div {
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.books {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.book {
+    width: minmax(230px, 1fr);
+    height: 320px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 1px rgba(124, 123, 124, 0.5);
+}
+
+.cover {
+    background-image: linear-gradient(to bottom, rgb(210, 124, 218), rgb(210, 124, 218));
+    border-radius: 20px 20px 0 0;
+    height: 200px;
+    font-size: small;
+    position: relative;
+}
+
+.cover p {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.book-content {
+    padding: 10px;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.book-title, .book-content > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-bottom {
+    position: relative;
+}
+
+.book-bottom img {
+    position: absolute;  
+    right: 20px;
+}
+
+.book-bottom img:hover {
+    width: 30px;
+}
+
+.book-bottom button{
+    width: 80px; 
+    padding: 0; 
+    height: 30px;
+}
+
+
+
+/* ads */
+
+.ads {
+    grid-area: ads;
+    width: max(240px);
+    color: white;
+    background-color: #84418a;
+    padding: 40px;
+    text-align: center;
+}
+
+.ads div {
+    margin-bottom: 20px;
+}
+
+.ads div p {
+    margin-bottom: 5px;
+}
+
+.ads-book {
+    width: 200px;
+    background-image: url(icon/side-right.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 330px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.ads-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.ads-flex span{
+    padding: 10px;
+}
+
+.ads-box-border {
+    border-right: rgba(255, 255, 255, 0.676) solid 1px;
+}
+
+/*  */
+.scrim {
+    background-color: rgba(211, 211, 211, 0.454);
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrim-container {
+    width: 480px;
+    border-radius: 20px;
+    padding: 20px 20px 40px 50px;
+    display: grid;
+}
+
+.close {
+    justify-self: end;
+}
+
+.scrim-container > h1 {
+    padding: 0 0 18px 0;
+    margin-bottom: 35px;
+    border-bottom: rgba(211, 211, 211, 0.454) solid 1px;
+}
+
+.scrim-container > div {
+    margin: 5px;
+}
+
+.scrim-container > div > label {
+    font-size: 18px;
+    display: block;
+}
+
+.scrim-container > div > input {
+    margin: 10px 0;
+    border: 2px solid rgba(211, 211, 211, 0.454);
+}
+
+.checkbox {
+    padding-bottom: 25px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.checkbox > span {
+    font-size: 18px;
+    
+}
+
+.scrim-confirm:hover {
+    background-color: rgb(189, 158, 220);
+}
+
+.scrim-reset {
+    color: rgb(132, 65, 138);
+    background-color: rgb(189, 158, 220);
+    margin-top: 10px;
+}
+
+.scrim-reset:hover {
+    color: white;
+    background-color: rgb(132, 65, 138);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+} 
+
+/* Style the label as the switch track */
+.toggle-switch {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Create the knob */
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;            
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Styles when the checkbox is checked */
+input[type="checkbox"]:checked + label {
+    background-color: rgb(132, 65, 138); 
+ } 
+
+input[type="checkbox"]:checked + label::after {
+    transform: translateX(30px); /* Move knob to the right */
+} 
